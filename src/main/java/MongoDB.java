@@ -6,9 +6,15 @@ public class MongoDB {
 
         Mongo mongo = new Mongo("localhost", 27017);
         DB db = mongo.getDB("testdb");
-        DBCollection table = db.getCollection("testcoll");
+        DBCollection table = db.getCollection("testdb");
 
-        table.drop();
+        find(table);
 
+
+    }
+
+    private static void find (DBCollection channelDBCollection){
+        DBCursor dbCursor = channelDBCollection.find();
+        while (dbCursor.hasNext()) System.out.println(dbCursor.next());
     }
 }

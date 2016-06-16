@@ -8,12 +8,23 @@
     <artifactId>Mongo</artifactId>
     <version>1.0</version>
 
+    <properties>
+        <mongodb.version>3.2.2</mongodb.version>
+        <json.version>20160212</json.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.mongodb</groupId>
             <artifactId>mongo-java-driver</artifactId>
-            <version>3.2.2</version>
+            <version>${mongodb.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>${json.version}</version>
+        </dependency>
+
     </dependencies>
 
 </project>
