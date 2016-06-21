@@ -12,13 +12,14 @@ public class MongoDB {
         DBCollection document = db.getCollection("employees"); // name of MongoDB document
         String json = "{\"name\" : \"Bartek Klys\"}"; //json we want to insert to document
 
-        //insertJSON(json, document);
-        document.drop();
+        insertJSON(json, document);
+        //document.drop();
         find(document);
     }
 
     /**
      * This method prints all records from database.
+     *
      * @param channelDBCollection - name of MongoDB document.
      */
     private static void find (DBCollection channelDBCollection){
@@ -28,6 +29,7 @@ public class MongoDB {
 
     /**
      * This method inserts json into a document in database.
+     *
      * @param json - this is JSON we want to insert into a document.
      * @param document - document in out database.
      */
