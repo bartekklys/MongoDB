@@ -5,7 +5,7 @@ import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.BasicDBObject;
 
-public class InsertDocument {
+public class InsertCollection {
 
     public void insert() {
 
@@ -13,7 +13,7 @@ public class InsertDocument {
 
             MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
             DB db = mongoClient.getDB( "testdb" );
-            DBCollection coll = db.getCollection("oceny");
+            DBCollection coll = db.getCollection("dupa");
 
             BasicDBObject doc = new BasicDBObject("title", "MongoDB").
                     append("description", "database");

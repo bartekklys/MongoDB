@@ -3,7 +3,8 @@ package DB;
 public class Start {
 
     public static void main(String[] args) {
-        //InsertDocument i = new InsertDocument();
+        //InsertCollection i = new InsertCollection();
+        //
         //i.insert();
 
         //GetCollection gc = new GetCollection();
