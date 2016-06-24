@@ -1,4 +1,4 @@
-package DB;
+package DB.DBManager;
 
 import com.mongodb.*;
 import com.mongodb.util.JSON;
@@ -9,8 +9,8 @@ public class MongoDB {
 
         Mongo mongo = new Mongo("localhost", 27017);
         DB db = mongo.getDB("testdb");
-        DBCollection document = db.getCollection("employees"); // name of MongoDB document
-        String json = "{\"name\" : \"Bartek Klys\"}"; //json we want to insert to document
+        DBCollection document = db.getCollection("employees"); // name of MongoDB collection
+        String json = "{\"name\" : \"Bartek Klys\"}"; //json we want to insert to collection
 
         insertJSON(json, document);
         //document.drop();

@@ -1,4 +1,4 @@
-package DB;
+package DB.DBManager;
 
 import com.mongodb.MongoClient;
 import com.mongodb.DB;
@@ -13,13 +13,12 @@ public class InsertCollection {
 
             MongoClient mongoClient = new MongoClient( "localhost" , 27017 );
             DB db = mongoClient.getDB( "testdb" );
-            DBCollection coll = db.getCollection("dupa");
+            DBCollection coll = db.getCollection("mojaKolekcjaTest");
 
-            BasicDBObject doc = new BasicDBObject("title", "MongoDB").
-                    append("description", "database");
+            //BasicDBObject doc = new BasicDBObject("title", "MongoDB").
+            //        append("description", "database");
 
-            coll.insert(doc);
-            System.out.println("Document inserted successfully");
+            //coll.insert(doc);
         }catch(Exception e){
             System.err.println( e.getClass().getName() + ": " + e.getMessage() );
         }

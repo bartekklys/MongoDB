@@ -1,4 +1,4 @@
-package DB;
+package DB.DBManager;
 
 import com.mongodb.MongoClient;
 import com.mongodb.DB;
